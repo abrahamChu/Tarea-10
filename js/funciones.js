@@ -65,19 +65,21 @@ window.onload = function () {
 
   letra.addEventListener("keyup", sustituirLetras, false);
 
-  //Funcion que sustituye los guiones por las letras que son correctas.
   function sustituirLetras() {
-    var caracterBuscar = (letra.value).toUpperCase();
+    var caracterBuscar = letra.value.toUpperCase();
     letra.value = "";
     letra.focus();
-    for (i = 0; i < aux.length; i++) {
-      if (caracterBuscar == aux[i]) {
-        adivinar = adivinar.substring(0, i) + caracterBuscar + adivinar.substr(i + 1, adivinar.length);
-        aciertos.value = adivinar;
+    for (i = 0; i < palabraA.length; i++) {
+      if (caracterBuscar == palabraA[i]) {
+        adivinar =
+          adivinar.substring(0, i) +
+          caracterBuscar +
+          adivinar.substr(i + 1, adivinar.length);
+
+        aciertos.innerText = adivinar;
       }
     }
 
-    //Si la letra que ha introducido el usuario no esta en la palabra esta se guarda en la variable fallos.
     if (palabraA.indexOf(caracterBuscar) == -1) {
       p1 = document.createElement("p");
       var texto1 = document.createTextNode(caracterBuscar);
@@ -85,8 +87,7 @@ window.onload = function () {
       fallos.appendChild(p1);
     }
 
-    //Cuando se adivina la palabra se envia una alerta que te da la enhorabuena por acertarla.
-    if (aciertos.value.indexOf("-") == -1) {
+    if (aciertos.innerText.indexOf("-") == -1) {
       alert("HAS ACERTADO LA PALABRA");
     }
   }
