@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<s>, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css\estilos.css" />
+    <script src="js/funciones.js"></script>
+    <title>Ahorcado con imagenes</title>
+  </head>
+
+  <body>
+    <div id="contenedor">
+      <section id="archivo">
+        <input
+          type="file"
+          id="files"
+          name="files[]"
+          multiple
+          style="color: black; font-size: 12px"
+        />
+
+        <div id="contenedorImagen"></div>
+      </section>
+
+      <section id="seccion">
+        <article>
+          <h3>Letra:</h3>
+          <input type="text" id="letra" maxlength="1" />
+        </article>
+        <article>
+          <h3>Palabra:</h3>
+          <span id="palabra"></span>
+        </article>
+      </section>
+
+      <aside id="columna">
+        <h3>Fallos:</h3>
+        <span id="fallos"></span>
+      </aside>
+
+      <footer id="pie">
+        <p>Desarrollo de Aplicaciones Web(DAW) © CIFP Santa Catalina</p>
+      </footer>
+    </div>
+  </body>
+</html>

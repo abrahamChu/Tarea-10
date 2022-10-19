@@ -1,0 +1,92 @@
+#contenedor {
+  font: 1.2em Helvetica, Arial, sans-serif;
+  padding: 0;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  display: grid;
+  grid-template-areas:
+    "a a a"
+    "b b c"
+    "d d d";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 3fr 1fr;
+}
+
+@media screen and (max-width: 500px) {
+  #contenedor {
+    font: 1.2em Helvetica, Arial, sans-serif;
+    padding: 0;
+
+    margin: 15px;
+
+    display: grid;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+    grid-template-rows: auto auto auto auto;
+  }
+
+  #columna {
+    width: auto;
+    margin: 1%;
+  }
+
+  #seccion {
+    width: auto;
+    margin: 1%;
+  }
+
+  #pie {
+    padding: 1%;
+  }
+}
+body {
+  font-family: sans-serif;
+  background-color: #cfd5f0;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#archivo {
+  grid-area: a;
+}
+
+#seccion {
+  background-color: #9aa8e6;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  grid-area: b;
+}
+
+#palabra,
+#fallos {
+  font-size: larger;
+  color: black;
+}
+
+#letra {
+  width: 20px;
+  font-size: larger;
+  color: black;
+}
+
+#columna {
+  margin: 10px;
+  padding: 20px;
+  height: auto;
+  font-style: italic;
+  background-color: #9aa8e6;
+  grid-area: c;
+}
+
+#pie {
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid #575757;
+  grid-area: d;
+}
