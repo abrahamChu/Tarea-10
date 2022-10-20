@@ -11,7 +11,6 @@ window.onload = function () {
     var files = evt.target.files; // FileList object
 
     // Bucle que recorre las imagenes obtenidos de la carpeta seleccionada.
-    var columnas = 0;
     for (var i = 0, f; (f = files[i]); i++) {
       // Si f no es de type image , no continua y vuelve al inicio del bucle(continue)
       if (!f.type.match("image.*")) {
